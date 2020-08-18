@@ -1,9 +1,11 @@
-package com.jh.webservice.domain;
+package com.jh.webservice.domain.posts;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import com.jh.webservice.domain.BaseTimeEntity;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -20,8 +22,10 @@ import lombok.NoArgsConstructor;
 // access = AccessLevel.PROTECTED : 기본생성자의  접근권한을 protected로 제한 protected Posts(){}와 같은 효과임
 // => 왜 이렇게씀?? Entity클래스를 프로젝트 코드상에서 기본생성자로 생성하는것은 막되, JPA에서  Entity 클래스를 생성하는 것은 허용하기 위해 추가함.
 @Getter
-@Entity //테이블과 링크될 클래스임을 나타냄 . 언더스코어 네이밍(_)으로 이름을 매칭함 
-public class Posts {
+@Entity 
+
+//테이블과 링크될 클래스임을 나타냄 . 언더스코어 네이밍(_)으로 이름을 매칭함 
+public class Posts extends BaseTimeEntity{
 	@Id //해당 테이블의 PK필드를 나타냄
 	@GeneratedValue // PK의 생성규칙임. 기본값은 AUTO임. 자동증가하는 정수형값(시퀀스같은)
 	private Long id; //Long은 참조타입(Integer같은거), long은 원시타입임(int같은)

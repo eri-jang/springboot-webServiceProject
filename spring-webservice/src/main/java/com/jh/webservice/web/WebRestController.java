@@ -5,16 +5,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jh.webservice.domain.PostsRepository;
+import com.jh.webservice.domain.posts.PostsRepository;
 import com.jh.webservice.dto.PostsSaveRequestDto;
 
 import lombok.AllArgsConstructor;
 
 @RestController
+
 //@RestContcoller => @ResponseBody를 모든 메소드에 적용해주는 어노테이션임
 //@ResponseBody => 문자열을 JSON 형태로 반환해줌.
+
 @AllArgsConstructor
-//autowire대신 생성자로  bean객체를 받도록 하는것임. 모든필드를 인자값으로 하는 생성자를 생성해줌.
+
 
 public class WebRestController {
 	
@@ -34,6 +36,7 @@ public class WebRestController {
 	
 	@PostMapping("/posts")
 	public void savePosts(@RequestBody PostsSaveRequestDto dto) {
+		System.out.println("dto-------------------------------------" + dto);
 		postsRepository.save(dto.toEntity());
 	}
 }
