@@ -1,6 +1,5 @@
 package com.jh.webservice.domain;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
@@ -71,8 +70,8 @@ public class PostsRepositoryTest {
 	  //then 
 	 
 	 Posts posts = postsList.get(0);
-	 assertTrue(posts.getCreatedDate().isAfter(now));
 	 assertTrue(posts.getModifiedDate().isAfter(now));
+	 assertTrue(posts.getCreatedDate().isAfter(now));
 	  
 	  
 	 }

@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 //interface 생성후, JpaRepository<Entity클래스, PK타입S>를 상속하면 기본적인 CRUD 메소드가 자동생성됨.
 
 public interface PostsRepository extends JpaRepository<Posts, Long> {
+
 	
 }
