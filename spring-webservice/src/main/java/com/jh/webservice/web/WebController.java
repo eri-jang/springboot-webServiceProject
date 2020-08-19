@@ -12,6 +12,10 @@ public class WebController {
 
 	@GetMapping("/")
 	public String main() {
+		System.out.println("main method start");
 		return "main";
+		
+		
+		
 	}
 }
