@@ -1,13 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>스프링부트 웹서비스</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!--부트스트랩 css 추가-->
-    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
-    
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
 	<h5>스프링부트로 시작하는 웹 서비스</h5>
@@ -27,6 +22,8 @@
 			</thead>
 			<tbody id="tbody">
 			{{#each posts}}
+			<!-- {{#each posts}} : posts라는 리스트를 하나씩 꺼내 각각의 필드값을 채워서 테이블에 출력시킴 
+			{{}}는 handlebars 문법임.-->
 				<tr>
 					<td>{{id}}</td>
 					<td>{{title}}</td>
@@ -71,13 +68,5 @@
 			</div>
 		</div>
 	</div>
-    
-
-    <!-- 부트스트랩 js, jquery 추가-->
-    <script src="/js/lib/jquery.min.js"></script>
-    <script src="/js/lib/bootstrap.min.js"></script>
-    
-    <!-- custom js 추가(main.js)-->
-    <script src="/js/app/main.js"></script>
 </body>
 </html>
