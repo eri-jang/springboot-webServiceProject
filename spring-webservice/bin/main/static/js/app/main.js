@@ -14,11 +14,12 @@ var main = {
 			
 			$.ajax({
 				type: 'POST',
-				url: '/post',
+				url: '/posts',
 				dataType: 'json',
 				contentType: 'application/json; charset=utf-8',
 				data: JSON.stringify(data)
 			}).done(function(){
+				console.log('dddddddd');
 				alert('글이 등록되었습니다.');
 				location.reload();
 			}).fail(function(error){
